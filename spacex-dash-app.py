@@ -66,9 +66,9 @@ def get_pie_chart(entered_site):
         return fig
     else:
         filtered_df = filtered_df[filtered_df['Launch Site'] == entered_site]
-        filtered_df['success'] = 1
+        filtered_df['launches'] = 1
 
-        fig = px.pie(filtered_df, values='success', 
+        fig = px.pie(filtered_df, values='launches', 
         names='class', 
         title='Total Success Launches for site {}'.format(entered_site))
         return fig
